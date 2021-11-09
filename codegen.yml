@@ -1,0 +1,22 @@
+schema:
+  - 'libs/api/feature/**/*.schema.ts'
+  - 'libs/api/data-access/graphql/**/*.schema.ts'
+generates:
+  libs/api/graphql/src/lib/graphql.ts:
+    plugins:
+      - 'typescript'
+    config:
+      skipTypename: true
+      maybeValue: T
+
+  libs/client/graphql/src/lib/graphql.ts:
+    documents:
+      - 'libs/client/feature/**/*.gql'
+      - 'libs/client/ui/**/*.gql'
+    #  - 'libs/data-access/storage/**/*.gql'
+    config:
+      maybeValue: T
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'

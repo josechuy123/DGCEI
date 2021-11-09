@@ -1,0 +1,68 @@
+{
+  "npmScope": "dgice-academy",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "ZDVjYWQ1MmItZGE4OS00NGUwLWE4MzQtZTRiMTAwZDIxOTQwfHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "api": {
+      "tags": []
+    },
+    "api-data-access-datasource": {
+      "tags": []
+    },
+    "api-data-access-graphql": {
+      "tags": []
+    },
+    "api-feature-course": {
+      "tags": []
+    },
+    "api-feature-dislike": {
+      "tags": []
+    },
+    "api-feature-like": {
+      "tags": []
+    },
+    "api-feature-role": {
+      "tags": []
+    },
+    "api-feature-user": {
+      "tags": []
+    },
+    "api-graphql": {
+      "tags": []
+    },
+    "client": {
+      "tags": []
+    },
+    "client-graphql": {
+      "tags": []
+    },
+    "client-ui": {
+      "tags": []
+    }
+  }
+}

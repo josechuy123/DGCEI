@@ -1,0 +1,340 @@
+{
+  "version": 2,
+  "projects": {
+    "api": {
+      "root": "apps/api",
+      "sourceRoot": "apps/api/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/api",
+            "main": "apps/api/src/main.ts",
+            "tsConfig": "apps/api/tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api"],
+          "options": {
+            "jestConfig": "apps/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-data-access-datasource": {
+      "root": "libs/api/data-access/datasource",
+      "sourceRoot": "libs/api/data-access/datasource/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/data-access/datasource/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/data-access/datasource"],
+          "options": {
+            "jestConfig": "libs/api/data-access/datasource/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-data-access-graphql": {
+      "root": "libs/api/data-access/graphql",
+      "sourceRoot": "libs/api/data-access/graphql/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/data-access/graphql/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/data-access/graphql"],
+          "options": {
+            "jestConfig": "libs/api/data-access/graphql/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-course": {
+      "root": "libs/api/feature/course",
+      "sourceRoot": "libs/api/feature/course/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature/course/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/feature/course"],
+          "options": {
+            "jestConfig": "libs/api/feature/course/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-dislike": {
+      "root": "libs/api/feature/dislike",
+      "sourceRoot": "libs/api/feature/dislike/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature/dislike/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/feature/dislike"],
+          "options": {
+            "jestConfig": "libs/api/feature/dislike/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-like": {
+      "root": "libs/api/feature/like",
+      "sourceRoot": "libs/api/feature/like/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature/like/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/feature/like"],
+          "options": {
+            "jestConfig": "libs/api/feature/like/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-role": {
+      "root": "libs/api/feature/role",
+      "sourceRoot": "libs/api/feature/role/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature/role/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/feature/role"],
+          "options": {
+            "jestConfig": "libs/api/feature/role/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-user": {
+      "root": "libs/api/feature/user",
+      "sourceRoot": "libs/api/feature/user/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature/user/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/feature/user"],
+          "options": {
+            "jestConfig": "libs/api/feature/user/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-graphql": {
+      "root": "libs/api/graphql",
+      "sourceRoot": "libs/api/graphql/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/graphql/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/graphql"],
+          "options": {
+            "jestConfig": "libs/api/graphql/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "client": {
+      "root": "apps/client",
+      "sourceRoot": "apps/client",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "root": "apps/client",
+            "outputPath": "dist/apps/client"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "full": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "nx serve api",
+                "forwardAllArgs": false
+              },
+              {
+                "command": "nx serve client"
+              }
+            ]
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "client:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "client:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "client:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/client"],
+          "options": {
+            "jestConfig": "apps/client/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/client/**/*.{ts,tsx,js,jsx}"]
+          }
+        }
+      }
+    },
+    "client-graphql": {
+      "root": "libs/client/graphql",
+      "sourceRoot": "libs/client/graphql/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/client/graphql/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/graphql"],
+          "options": {
+            "jestConfig": "libs/client/graphql/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "client-ui": {
+      "root": "libs/client/ui",
+      "sourceRoot": "libs/client/ui/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/client/ui/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/ui"],
+          "options": {
+            "jestConfig": "libs/client/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "client"
+}

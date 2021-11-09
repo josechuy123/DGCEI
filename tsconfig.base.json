@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom", "ES2019"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@dgice-academy/api/data-access/datasource": [
+        "libs/api/data-access/datasource/src/index.ts"
+      ],
+      "@dgice-academy/api/data-access/graphql": [
+        "libs/api/data-access/graphql/src/index.ts"
+      ],
+      "@dgice-academy/api/feature/course": [
+        "libs/api/feature/course/src/index.ts"
+      ],
+      "@dgice-academy/api/feature/dislike": [
+        "libs/api/feature/dislike/src/index.ts"
+      ],
+      "@dgice-academy/api/feature/like": ["libs/api/feature/like/src/index.ts"],
+      "@dgice-academy/api/feature/role": ["libs/api/feature/role/src/index.ts"],
+      "@dgice-academy/api/feature/user": ["libs/api/feature/user/src/index.ts"],
+      "@dgice-academy/api/graphql": ["libs/api/graphql/src/index.ts"],
+      "@dgice-academy/client/graphql": ["libs/client/graphql/src/index.ts"],
+      "@dgice-academy/client/ui": ["libs/client/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
